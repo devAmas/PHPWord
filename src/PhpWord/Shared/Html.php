@@ -869,6 +869,10 @@ class Html
                     }
 
                     break;
+                case 'cantsplit':
+                    $styles['cantSplit'] = (bool)trim($value);
+
+                    break;
             }
         }
 
