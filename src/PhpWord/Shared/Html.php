@@ -650,6 +650,9 @@ class Html
     {
         $cNodes = $node->childNodes;
         if (!empty($cNodes)) {
+             /*FIX issue with incorrect style parsing  of LI element*/
+            $styles['paragraph'] = self::recursiveParseStylesInHierarchy($node, $styles['paragraph']);
+            
             $listRun = $element->addListItemRun($data['listdepth'], $styles['list'], $styles['paragraph']);
             foreach ($cNodes as $cNode) {
                 self::parseNode($cNode, $listRun, $styles, $data);
