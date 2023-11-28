@@ -876,6 +876,14 @@ class Html
                     $styles['cantSplit'] = (bool)trim($value);
 
                     break;
+                case 'table-layout':
+
+                    if($value == 'fixed'){
+                        $styles['layout'] = \PhpOffice\PhpWord\Style\Table::LAYOUT_AUTO;
+                    }else{
+                        $styles['layout'] = \PhpOffice\PhpWord\Style\Table::LAYOUT_FIXED;
+                    }
+                    break;
             }
         }
 
