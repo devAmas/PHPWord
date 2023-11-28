@@ -879,9 +879,9 @@ class Html
                 case 'table-layout':
 
                     if($value == 'fixed'){
-                        $styles['layout'] = \PhpOffice\PhpWord\Style\Table::LAYOUT_AUTO;
-                    }else{
                         $styles['layout'] = \PhpOffice\PhpWord\Style\Table::LAYOUT_FIXED;
+                    }else{
+                        $styles['layout'] = \PhpOffice\PhpWord\Style\Table::LAYOUT_AUTO;
                     }
                     break;
             }
